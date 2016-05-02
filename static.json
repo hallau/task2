@@ -1,5 +1,5 @@
 {
-  "root": "/videoplayer",
-  "encoding": "US-ASCII"
+  "root": "videoplayer",
+  "clean_urls": false
 
 }
