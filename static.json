@@ -1,5 +1,8 @@
 {
   "root": "videoplayer",
-  "clean_urls": false
+  "clean_urls": false,
+  "routes": {
+    "/**": "index.html"
+  }
 
 }
