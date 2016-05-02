@@ -1,0 +1,140 @@
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*@media (min-width: 768px) {*/
+/*.container {*/
+/*width: 750px;*/
+/*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+/*.container {*/
+/*width: 970px;*/
+/*}*/
+/*}*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.playlist ul {
+    list-style-type: none;
+}
+
+.playlist ul a {
+    cursor: pointer;
+    color: #428bca;
+    text-decoration: none;
+}
+
+.playlist ul a:visited {
+    color: #428bca;
+}
+
+.playlist ul a:hover {
+    color: #428bca;
+    text-decoration: underline;
+}
+
+.meta-info {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 12%;
+    font-weight: bold;
+}
+
+.meta-info span {
+    font-weight: normal;
+}
+
+.videogular-container {
+    width: 100%;
+    height: 320px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.videogular-container .skipButton {
+    position: absolute;
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    z-index: 99999;
+    color: white;
+    cursor: pointer;
+    background-color: #666666;
+    border: 2px #FFFFFF solid;
+    display: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .videogular-container {
+        margin-top: 40px;
+        width: 940px;
+        height: 528.75px;
+    }
+
+    .videogular-container.audio {
+        width: 1170px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 2200px) {
+    .videogular-container {
+        width: 940px;
+        height: 528.75px;
+    }
+
+    .videogular-container.audio {
+        width: 940px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .videogular-container {
+        width: 728px;
+        height: 409.5px;
+    }
+
+    .videogular-container.audio {
+        width: 728px;
+        height: 50px;
+    }
+}
+
+.row {
+    margin-left: 6%;
+}
+
+@media (min-width: 768px) {
+
+    .grid {
+        float: left;
+        width: 25%;
+    }
+
+}
+
+@media (min-width: 420px)  and  (max-width: 767px) {
+
+    .grid {
+        float: left;
+        width: 50%;
+    }
+
+}

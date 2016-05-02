@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="app.css">
+<div ng-app="player">
+    <div ng-controller="HomeCtrl" class="container">
+        <div class="videogular-container">
+            <videogular vg-player-ready="onPlayerReady($API)" vg-complete="onCompleteVideo()"
+                        vg-theme="config.theme.url">
+                <vg-media vg-src="config.sources"
+                          vg-tracks="config.tracks">
+                </vg-media>
+
+                <vg-controls>
+                    <vg-play-pause-button></vg-play-pause-button>
+                    <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+                    <vg-scrub-bar>
+                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    </vg-scrub-bar>
+                    <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+                    <vg-volume>
+                        <vg-mute-button></vg-mute-button>
+                        <vg-volume-bar></vg-volume-bar>
+                    </vg-volume>
+                    <vg-fullscreen-button></vg-fullscreen-button>
+                </vg-controls>
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <vg-poster vg-url='config.plugins.poster'></vg-poster>
+            </videogular>
+        </div>
+        <div class="meta-info">
+            <h2>{{videos[currentVideo].title}}({{videos[currentVideo].meta.releaseYear}})</h2>
+
+            <p>Directors: <span
+                    ng-repeat="director in videos[currentVideo].meta.directors">{{director.name}}&nbsp</span></p>
+        </div>
+        <div class="playlist row">
+            <ul>
+                <li ng-repeat="video in videos" class="grid">
+                    <a ng-click="setVideo(video.id -1)"> <img ng-src="{{:: video.images.cover}}"> <br>
+                        {{:: video.title}} <br>
+                        {{:: video.meta.releaseYear}} </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="bower_components/videogular/videogular.min.js"></script>
+<script type="text/javascript" src="bower_components/videogular-controls/vg-controls.js"></script>
+<script type="text/javascript" src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>
+<script type="text/javascript" src="bower_components/videogular-poster/vg-poster.js"></script>
+<script type="text/javascript" src="bower_components/videogular-buffering/vg-buffering.js"></script>
+<script type="text/javascript" src="player/app.js"></script>
+<script type="text/javascript" src="player/videoService.js"></script>
+<script type="text/javascript" src="player/videoController.js"></script>
