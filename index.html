@@ -1,59 +1,25 @@
-<link rel="stylesheet" href="app.css">
-<div ng-app="player">
-    <div ng-controller="HomeCtrl" class="container">
-        <div class="videogular-container">
-            <videogular vg-player-ready="onPlayerReady($API)" vg-complete="onCompleteVideo()"
-                        vg-theme="config.theme.url">
-                <vg-media vg-src="config.sources"
-                          vg-tracks="config.tracks">
-                </vg-media>
+<head>
+    <meta charset="utf-8">
+    <title>task2</title>
+    <link rel="stylesheet" href="app.css">
+</head>
 
-                <vg-controls>
-                    <vg-play-pause-button></vg-play-pause-button>
-                    <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
-                    <vg-scrub-bar>
-                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-                    </vg-scrub-bar>
-                    <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
-                    <vg-volume>
-                        <vg-mute-button></vg-mute-button>
-                        <vg-volume-bar></vg-volume-bar>
-                    </vg-volume>
-                    <vg-fullscreen-button></vg-fullscreen-button>
-                </vg-controls>
-                <vg-overlay-play></vg-overlay-play>
-                <vg-buffering></vg-buffering>
-                <vg-poster vg-url='config.plugins.poster'></vg-poster>
-            </videogular>
-        </div>
-        <div class="meta-info">
-            <h2>{{videos[currentVideo].title}}({{videos[currentVideo].meta.releaseYear}})</h2>
+<body>
+<div align="center">
 
-            <p>Directors: <span
-                    ng-repeat="director in videos[currentVideo].meta.directors">{{director.name}}&nbsp</span></p>
-        </div>
-        <div class="playlist row">
-            <ul>
-                <li ng-repeat="video in videos" class="grid">
-                    <a ng-click="setVideo(video.id -1)"> <img ng-src="{{:: video.images.cover}}"> <br>
-                        {{:: video.title}} <br>
-                        {{:: video.meta.releaseYear}} </a>
-                </li>
+    <video width="320" height="240" controls id="video-container" class="video-container"></video>
 
-            </ul>
-        </div>
-    </div>
-
+    <div id="video-playlist" class="playlist"></div>
 </div>
-</div>
+</body>
 
-<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="bower_components/videogular/videogular.min.js"></script>
-<script type="text/javascript" src="bower_components/videogular-controls/vg-controls.js"></script>
-<script type="text/javascript" src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>
-<script type="text/javascript" src="bower_components/videogular-poster/vg-poster.js"></script>
-<script type="text/javascript" src="bower_components/videogular-buffering/vg-buffering.js"></script>
-<script type="text/javascript" src="player/app.js"></script>
-<script type="text/javascript" src="player/videoService.js"></script>
-<script type="text/javascript" src="player/videoController.js"></script>
+<script type="text/javascript" src="video-player.js"></script>
+<script type="text/javascript">
+    initPlayer({
+        url: 'movies.json',
+        playerId: 'video-container',
+        playlistId: 'video-playlist'
+
+    })
+
+</script>

@@ -13,12 +13,12 @@
         "cover": "cover-bigbuckbunny.png",
         "placeholder": "placeholder-bigbuckbunny-1080p.png"
     },
-    "sources": [{
+    "streams": [{
         "type": "video/mp4",
-        "src": "http://media.w3.org/2010/05/bunny/movie.mp4"
+        "url": "http://media.w3.org/2010/05/bunny/movie.mp4"
     }, {
         "type": "video/ogv",
-        "src": "http://media.w3.org/2010/05/bunny/movie.ogv"
+        "url": "http://media.w3.org/2010/05/bunny/movie.ogv"
     }]
 }, {
     "id": "2",
@@ -39,15 +39,15 @@
         "cover": "cover-sintel.png",
         "placeholder": "placeholder-sintel-1080p.png"
     },
-    "sources": [{
+    "streams": [{
         "type": "video/mp4",
-        "src": "http://media.w3.org/2010/05/sintel/trailer.mp4"
+        "url": "http://media.w3.org/2010/05/sintel/trailer.mp4"
     }, {
         "type": "video/webm",
-        "src": "http://media.w3.org/2010/05/sintel/trailer.webm"
+        "url": "http://media.w3.org/2010/05/sintel/trailer.webm"
     }, {
         "type": "video/ogv",
-        "src": "http://media.w3.org/2010/05/sintel/trailer.ogv"
+        "url": "http://media.w3.org/2010/05/sintel/trailer.ogv"
     }]
 }, {
     "id": "3",
@@ -68,9 +68,9 @@
         "cover": "cover-elephantsdream.png",
         "placeholder": "placeholder-elephantsdream-1080p.png"
     },
-    "sources": [{
+    "streams": [{
         "type": "video/webm",
-        "src": "http://lachy.id.au/lib/media/elephantsdream/Elephants_Dream-360p-Stereo.webm"
+        "url": "http://lachy.id.au/lib/media/elephantsdream/Elephants_Dream-360p-Stereo.webm"
     }]
 }, {
     "id": "4",
@@ -93,8 +93,8 @@
         "cover": "cover-sita.png",
         "placeholder": "placeholder-sitasingstheblues-1080p.png"
     },
-    "sources": [{
+    "streams": [{
         "type": "video/webm",
-        "src": "http://lachy.id.au/lib/media/sitasingstheblues/Sita_Sings_the_Blues-360p-Stereo.webm"
+        "url": "http://lachy.id.au/lib/media/sitasingstheblues/Sita_Sings_the_Blues-360p-Stereo.webm"
     }]
 }]
